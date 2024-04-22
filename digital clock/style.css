@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  margin-top: 15%;
+  text-align: center;
+  text-transform: uppercase;
+  word-spacing: 20px;
+  font-size: 80px;
+  font-weight: 900;
+  background: linear-gradient(to right, red, blue);
+  color: transparent;
+  -webkit-background-clip:text;
+  text-shadow: 0 0 60px rgba(231, 11, 11, 0.699);
+  animation: anime 1s infinite alternate;
+}
+
+@keyframes anime {
+  100% {
+    text-shadow: 0 0 60px rgba(14, 14, 235, 0.747);
+  }
+}
+
+.box {
+  height: 70px;
+  width: 150px;
+  border: 3px double rgba(5, 66, 5, 0.753);
+  background-color: grey;
+}
