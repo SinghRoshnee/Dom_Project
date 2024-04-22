@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+    background-color: lightseagreen;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main{
+    height: 450px;
+    width: 300px;
+    border: 2px solid white;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.card{
+    height: 100px;
+    width: 100%;
+    border-bottom: 2px solid rgba(128, 128, 128, 0.705);
+    padding: 10px;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    background-color:rgba(80, 231, 224, 0.466);
+}
+
+.card::-webkit-scrollbar{
+    display: none;
+}
+
+.card_insider{
+    height: 100%;
+    width: 100%;
+    /* background-color: red; */
+ 
+    transition: all linear 0.3s;
+}
+
+.card_insider img{
+    height: 100%;
+    width: 100%;
+    object-position: center;
+    background-size: cover;
+}
+
+.story{
+    height: 80px;
+    width: 80px;
+    /* border: 2px solid black; */
+    background: linear-gradient(red,yellow,green,rgb(221, 55, 83),brown);
+    padding: 3px;
+    border-radius: 50%;
+    display: inline-block;
+    overflow: hidden;
+    margin: 3px;
+    
+   
+}
+
+.story img{
+    height: 100%;
+    width: 100%;
+    /* object-fit: cover; */
+    border-radius: 50%;
+    object-position: center;
+    background-size: cover;
+    
+}
+
+.plain_page{
+    height: 100%;
+    width: 100%;
+    /* background-color: red; */
+    position: absolute;
+    display: none;
+    /* object-fit: cover; */
+    object-position: center;
+    background-size: cover;
+}
+
+.time_line{
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    top: 20px;
+    border-radius: 5px;
+    background-color: red;
+    animation: timeline 2s linear forwards ;
+}
+
+@keyframes timeline {
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 100%;
+    }
+}
