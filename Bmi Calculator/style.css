@@ -27,18 +27,21 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 500px;
+  width: 450px;
   /* background-color: green; */
 }
 
 form {
   background-color: var(--form-color);
-  height: 500px;
-  width: 450px;
+  /* height: 500px;
+  width: 450px; */
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
   border-radius: 20px;
+  padding: 20px 30px;
 }
 
 h1 {
