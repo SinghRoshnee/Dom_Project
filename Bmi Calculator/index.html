@@ -1,24 +1,24 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title></title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
     <div class="container">
-      <h2>BMI Calculator</h2>
+        <form>
+            <h1>BMI Calculator</h1>
+            <p><label for="height">Height in Meter :</label> <input type="text" id="height"></p>
+            <p><label for="weight">Weight in Kg :</label> <input type="text" id="weight"></p>
+            <button type="submit">Result</button>
+            <div class="result"></div>
+            <div class="section"> Calculation according to Result
+                <p class="msg" ></p>
+            </div>
+        </form>
     </div>
-    <br /><br />
-    <form>
-      <p>
-        <label>Enter the Height : </label> <input type="text" id="height" />
-      </p>
-      <br />
-      <label>Enter the weight : </label><input type="text" id="width" />
-      <br /><br />
-      <button>Submit</button>
-      <input type="text" placeholder="result" class="result" />
-    </form>
-  </body>
-  <script src="main.js"></script>
+   <script src="script.js"></script>
+</body>
 </html>

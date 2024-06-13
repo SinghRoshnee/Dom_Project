@@ -1,43 +1,101 @@
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-body{
- height:100%;
- width:100%;
- background-color: rgba(70, 68, 68, 0.308);
+:root {
+  --primary-text-color: #ffffffc9;
+  --secondary-text-color: #e0e0e0;
+  --form-color: #151834;
+  --primary-background-color: #a4aed8;
 }
 
-.container{
-height:80px;
-width:100%;
-background-color:grey;
-display:flex;
-justify-content:center;
-align-items:center;
-gap:10px;
-border:2px solid black;
+body {
+  /* background-color: #292929; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  background-color: var(--primary-background-color);
 }
 
-h2{
-    font-size: 30px;
-}
-label{
- font-size:20px;
- font-family:times new roman;
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: green; */
 }
 
-input{
-border:2px solid black;
-height:30px;
-border-radius:6px;
+form {
+  background-color: var(--form-color);
+  height: 500px;
+  width: 450px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 20px;
 }
-/* 
-.result{
- font-size:20px;
- font-family:times new roman;
- background-color:blue;
- border-radius:6px;
-} */
+
+h1 {
+  font-size: 2.2rem;
+  text-align: center;
+  color: var(--primary-text-color);
+  padding: 20px 10px;
+  font-weight: 900;
+  padding-bottom: rem;
+}
+
+p {
+  padding: 10px 20px;
+}
+
+label {
+  font-size: 1.1rem;
+  color: var(--primary-text-color);
+}
+
+input {
+  padding: 8px;
+  background-color: var(--secondary-text-color);
+  border: none;
+  outline: none;
+  color: #000;
+  border-radius: 10px;
+}
+
+.result {
+  padding: 10px 20px;
+  color: var(--primary-text-color);
+  font-size: 1.5rem;
+  text-align: justify;
+}
+
+button {
+  width: 13rem;
+  padding: 13px;
+  color: #fff;
+  background-color: #7daba1;
+  font-size: 1rem;
+  margin: 20px 20px;
+  border-radius: 20px;
+  border: none;
+}
+.section {
+  padding: 20px 20px;
+  font-size: 1.3rem;
+  color: var(--primary-text-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+   display: none; 
+}
+
+.msg {
+  font-size: 1rem;
+}
