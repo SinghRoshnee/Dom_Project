@@ -1,42 +1,39 @@
+// script.js
 const form = document.querySelector("form");
-// console.log(form);
+
 form.addEventListener("submit", function (e) {
   e.preventDefault();
-  console.log(e);
-  console.log("hi");
 
-  const height = parseInt(document.querySelector("#height").value);
-  console.log(height);
-  const weight = parseInt(document.querySelector("#weight").value);
-  console.log(weight);
+  const height = parseFloat(document.querySelector("#height").value);
+  const weight = parseFloat(document.querySelector("#weight").value);
   const result = document.querySelector(".result");
-  const msg = document.querySelector('.msg')
-  const section = document.querySelector('.section')
+  const msg = document.querySelector(".msg");
+  const section = document.querySelector(".section");
 
+  // Clear previous results
+  result.innerHTML = "";
+  msg.innerHTML = "";
 
-  if (height == "" || height < 0) {
-    console.log("small");
+  if (isNaN(height) || height <= 0) {
     const ptag = document.createElement("p");
-    ptag.innerHTML = `Entered height is invalid  ${height}`;
+    ptag.innerHTML = `Entered height is invalid: ${height}`;
     result.appendChild(ptag);
-  } else if (weight == " " || weight < 0) {
+  } else if (isNaN(weight) || weight <= 0) {
     const ptag = document.createElement("p");
-    ptag.innerHTML = `Entered weight is invalid ${weight}`;
+    ptag.innerHTML = `Entered weight is invalid: ${weight}`;
     result.appendChild(ptag);
   } else {
-    const bmi = (weight / ((height * height) / 10000)).toFixed(2);
-    result.innerHTML = `<span>Calculated value is ${bmi}</span>`;
-    section.style.display = "block"
-    if (bmi < 12) {
-      msg.innerHTML = `You are underweight ${bmi}`;
-    } else if (bmi > 14) {
-      msg.innerHTML = `You are Overweight ${bmi}`;
+    const bmi = (weight / (height * height)).toFixed(2);
+    result.classList.add("active");
+    result.innerHTML = `<span>Calculated BMI is ${bmi}</span>`;
+    section.style.display = "block";
+
+    if (bmi < 18.5) {
+      msg.innerHTML = `You are underweight: ${bmi}`;
+    } else if (bmi > 24.9) {
+      msg.innerHTML = `You are overweight: ${bmi}`;
     } else {
-      msg.innerHTML = `You are normal ${bmi}`;
+      msg.innerHTML = `You are perfect in weight: ${bmi}`;
     }
   }
 });
-
-// if (bmi < 12) msg1.innerHTML = `You are underweight ${bmi}`;
-// else if (bmi <= 14 ) msg2.innerHTML = `You are perfect ${bmi}`;
-// else msg3.innerHTML = `You are Overweight ${bmi}`;
